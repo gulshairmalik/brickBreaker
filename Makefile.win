@@ -1,0 +1,28 @@
+# Project: Game
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = Brick-game.o
+LINKOBJ  = Brick-game.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -L"C:/dev_lib/SDL2-2.0.5/i686-w64-mingw32/lib" -static-libgcc -L"C:/dev_lib/SDL2-2.0.5/i686-w64-mingw32/lib" -mwindows -lmingw32 -lSDL2main -lSDL2  -lSDL2_mixer  -lSDL2_ttf  -lSDL2_image -m32 -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/dev_lib/SDL2-2.0.5/i686-w64-mingw32/include/SDL2" -I"C:/dev_lib/SDL2-2.0.5/i686-w64-mingw32/include/SDL2"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/dev_lib/SDL2-2.0.5/i686-w64-mingw32/include/SDL2" -I"C:/dev_lib/SDL2-2.0.5/i686-w64-mingw32/include/SDL2"
+BIN      = Game.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Brick-game.o: Brick-game.c
+	$(CC) -c Brick-game.c -o Brick-game.o $(CFLAGS)

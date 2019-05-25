@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1480659560 source:e:\code blocks ds\assignment#1\brick-game.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL.h>
+	<stdbool.h>
+	<SDL_image.h>
+
+1481844443 source:e:\code blocks ds\sdl demo\brick-game.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<stdbool.h>
+
+1482486980 source:e:\code blocks ds\sdl brick breaker\brick-game.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<stdbool.h>
+
